@@ -37,7 +37,7 @@
         day: parseInt(get('day')),
         year: parseInt(get('year')),
         time: `${hour}:${minute}:${second}`,
-        "24hours": false
+        "24-hour": false
       };
 
       document.getElementById('datetime').textContent = JSON.stringify(json, null, 2);
