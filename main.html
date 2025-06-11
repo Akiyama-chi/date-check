@@ -8,9 +8,9 @@
   <pre id="datetime">Loading...</pre>
 
   <script>
-    function updatePhilippineTime() {
+    function updateTime() {
       const options = {
-        timeZone: 'Asia/Manila',
+        timeZone: 'Asia/Tokyo',
         year: 'numeric',
         month: '2-digit',
         day: '2-digit',
@@ -21,12 +21,12 @@
         hour12: true
       };
       const now = new Date();
-      const formatter = new Intl.DateTimeFormat('en-PH', options);
+      const formatter = new Intl.DateTimeFormat('en-JP', options);
       document.getElementById('datetime').textContent = formatter.format(now);
     }
 
-    updatePhilippineTime();
-    setInterval(updatePhilippineTime, 100);
+    updateTime();
+    setInterval(updateTime, 100);
   </script>
 </body>
 </html>
