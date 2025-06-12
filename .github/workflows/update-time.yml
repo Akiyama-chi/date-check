@@ -1,8 +1,9 @@
 name: Update Time JSON
 
 on:
+  push:
   schedule:
-    - cron: '*/1 * * * *'  # Runs every minute
+    - cron: '*/1 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -19,6 +20,7 @@ jobs:
 
       - name: Generate JSON
         run: |
+          echo "Running at $(date)"
           mkdir -p data
           node time-check.js
 
