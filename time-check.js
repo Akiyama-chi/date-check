@@ -32,6 +32,4 @@ const json = {
   "24-hour": false
 };
 
-fs.mkdirSync('data', { recursive: true });
-fs.writeFileSync('data/data.json', JSON.stringify(json, null, 2));
-console.log('data/data.json written.');
+fs.writeFileSync('time.json', JSON.stringify(json, null, 2));
