@@ -19,7 +19,7 @@ jobs:
       - name: Generate JSON
         run: |
           mkdir -p data
-          node generate-time.js
+          node time-check.js
 
       - name: Commit and push
         run: |
