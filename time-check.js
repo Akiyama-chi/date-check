@@ -12,7 +12,7 @@ const options = {
   hour: '2-digit',
   minute: '2-digit',
   second: '2-digit',
-  hour12: false
+  hour12: true
 };
 
 const formatter = new Intl.DateTimeFormat('en-US', options);
@@ -29,7 +29,7 @@ const json = {
   day: parseInt(get('day')),
   year: parseInt(get('year')),
   time: `${hour}:${minute}:${second}`,
-  "24-hour": true
+  "24-hour": false
 };
 
 fs.writeFileSync('time.json', JSON.stringify(json, null, 2));
